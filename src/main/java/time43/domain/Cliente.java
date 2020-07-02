@@ -12,6 +12,7 @@ public class Cliente implements Serializable {
 	
 	@Id
 	private String id;
+	
 	private String nome;
 	private String email;
 	

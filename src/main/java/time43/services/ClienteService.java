@@ -28,5 +28,11 @@ public class ClienteService {
 		return cliente.orElseThrow(() -> new ObjectNotFoundException("Cliente não encontrado"));
 		
 	}
+	
+	public Cliente insert(Cliente cliente) {
+		
+		return clienteRepository.insert(cliente);
+		
+	}
 
 }

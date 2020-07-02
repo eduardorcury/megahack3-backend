@@ -5,15 +5,10 @@ import java.io.Serializable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
 public class Endereco implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
-	@Id
-	private String id;
-	
-	private Bar bar;
 	private String rua;
 	private String numero;
 	private String bairro;
@@ -22,29 +17,11 @@ public class Endereco implements Serializable {
 		
 	}
 
-	public Endereco(String id, Bar bar, String rua, String numero, String bairro) {
+	public Endereco(String rua, String numero, String bairro) {
 		super();
-		this.id = id;
-		this.bar = bar;
 		this.rua = rua;
 		this.numero = numero;
 		this.bairro = bairro;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public Bar getBar() {
-		return bar;
-	}
-
-	public void setBar(Bar bar) {
-		this.bar = bar;
 	}
 
 	public String getRua() {
@@ -70,7 +47,5 @@ public class Endereco implements Serializable {
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-	
-	
 
 }

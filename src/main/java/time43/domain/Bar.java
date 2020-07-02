@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import time43.enums.BarEstado;
@@ -20,6 +21,8 @@ public class Bar implements Serializable {
 	private Double pontuacao;
 	private Menu menu;
 	private Endereco endereco;
+	
+	@Transient
 	private BarEstado estado;
 	
 	private List<Cliente> clientes;
@@ -28,14 +31,13 @@ public class Bar implements Serializable {
 		
 	}
 
-	public Bar(String id, String nome, Double pontuacao, Menu menu, Endereco endereco, BarEstado estado) {
+	public Bar(String id, String nome, Double pontuacao, Menu menu, Endereco endereco) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.pontuacao = pontuacao;
 		this.menu = menu;
 		this.endereco = endereco;
-		this.estado = estado;
 	}
 
 	public String getId() {

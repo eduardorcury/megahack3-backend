@@ -7,5 +7,7 @@ import time43.domain.Cliente;
 
 @Repository
 public interface ClienteRepository extends MongoRepository<Cliente, String> {
+	
+	Cliente findByEmail(String email);
 
 }

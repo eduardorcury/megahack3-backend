@@ -9,22 +9,24 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Cliente implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private String id;
-	
+
 	private String nome;
 	private String email;
-	
+	private String senha;
+
 	public Cliente() {
-		
+
 	}
 
-	public Cliente(String id, String nome, String email) {
+	public Cliente(String id, String nome, String email, String senha) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
+		this.senha = senha;
 	}
 
 	public String getId() {
@@ -51,6 +53,14 @@ public class Cliente implements Serializable {
 		this.email = email;
 	}
 
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -75,5 +85,5 @@ public class Cliente implements Serializable {
 			return false;
 		return true;
 	}
-	
+
 }

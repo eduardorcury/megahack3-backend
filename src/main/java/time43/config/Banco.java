@@ -5,6 +5,7 @@ import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import time43.domain.Bar;
 import time43.domain.Bebida;
@@ -19,6 +20,9 @@ import time43.repository.ClienteRepository;
 public class Banco implements CommandLineRunner {
 	
 	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+	
+	@Autowired
 	private ClienteRepository clienteRepository;
 	
 	@Autowired
@@ -30,9 +34,9 @@ public class Banco implements CommandLineRunner {
 		clienteRepository.deleteAll();
 		barRepository.deleteAll();
 		
-		Cliente cliente1 = new Cliente(null, "Eduardo", "eduardo@gmail.com");
-		Cliente cliente2 = new Cliente(null, "ELizabeth", "eliz@gmail.com");
-		Cliente cliente3 = new Cliente(null, "Ana", "ana@gmail.com");
+		Cliente cliente1 = new Cliente(null, "Eduardo", "eduardo@gmail.com", passwordEncoder.encode("senha1"));
+		Cliente cliente2 = new Cliente(null, "ELizabeth", "eliz@gmail.com", passwordEncoder.encode("senha2"));
+		Cliente cliente3 = new Cliente(null, "Ana", "ana@gmail.com", passwordEncoder.encode("senha3"));
 		
 		clienteRepository.saveAll(Arrays.asList(cliente1, cliente2, cliente3));
 		

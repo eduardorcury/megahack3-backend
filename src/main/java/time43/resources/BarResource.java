@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import time43.domain.Bar;
+import time43.dto.BarEstadoDTO;
 import time43.dto.PontuacaoDTO;
 import time43.services.BarService;
 
@@ -61,8 +62,22 @@ public class BarResource {
 		return ResponseEntity.noContent().build();
 		
 	}
+	
+	@PutMapping("/{id}/estado")
+	public ResponseEntity<Void> updateEstado(@PathVariable String id, @RequestBody BarEstadoDTO estado) {
+		
+		Bar bar = barService.findById(id);
+		bar.setId(id);
+		bar.setEstado(estado.getEstado());
+		bar = barService.updateEstado(bar);
+		return ResponseEntity.noContent().build();
+		
+	}
 
 }
+
+
+
 
 
 

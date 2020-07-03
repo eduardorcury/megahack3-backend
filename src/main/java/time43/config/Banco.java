@@ -13,6 +13,7 @@ import time43.domain.Cliente;
 import time43.domain.Comida;
 import time43.domain.Endereco;
 import time43.domain.Menu;
+import time43.enums.BarEstado;
 import time43.repository.BarRepository;
 import time43.repository.ClienteRepository;
 
@@ -58,8 +59,8 @@ public class Banco implements CommandLineRunner {
 		Endereco endereco1 = new Endereco("Rua Dourados", "270", "Centro");
 		Endereco endereco2 = new Endereco("Rua São Carlos", "1500", "Centro");
 
-		Bar bar1 = new Bar(null, "Bar do Zé", 5.0, menu1, endereco1);
-		Bar bar2 = new Bar(null, "Bar da Vó", 5.0, menu2, endereco2);
+		Bar bar1 = new Bar(null, "Bar do Zé", 5.0, menu1, endereco1, BarEstado.INDEFINIDO);
+		Bar bar2 = new Bar(null, "Bar da Vó", 5.0, menu2, endereco2, BarEstado.INDEFINIDO);
 		
 		bar1.setClientes(Arrays.asList(cliente1, cliente2));
 		bar2.setClientes(Arrays.asList(cliente2, cliente3));

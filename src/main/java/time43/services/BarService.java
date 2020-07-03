@@ -63,4 +63,16 @@ public class BarService {
 
 	}
 
+	public List<Bar> findByNome(String nome) {
+
+		return barRepository.findByNomeContainingIgnoreCase(nome);
+
+	}
+
+	public List<Bar> search(String texto) {
+
+		return barRepository.search(texto);
+
+	}
+
 }

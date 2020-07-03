@@ -11,12 +11,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import time43.domain.Bar;
 import time43.dto.BarEstadoDTO;
 import time43.dto.PontuacaoDTO;
+import time43.resources.util.URL;
 import time43.services.BarService;
 
 @RestController
@@ -29,7 +31,6 @@ public class BarResource {
 	@GetMapping
 	public ResponseEntity<List<Bar>> findAll() {
 		
-		
 		List<Bar> bares = barService.findAll();
 		return ResponseEntity.ok().body(bares);
 		
@@ -40,6 +41,18 @@ public class BarResource {
 		
 		Bar bar = barService.findById(id);
 		return ResponseEntity.ok().body(bar);
+		
+	}
+	
+	@GetMapping("/search")
+	public ResponseEntity<List<Bar>> search(
+			@RequestParam(value = "texto", defaultValue = "") String texto) {
+		
+		texto = URL.decodeParam(texto);
+		
+		List<Bar> bares = barService.search(texto);
+		
+		return ResponseEntity.ok().body(bares);
 		
 	}
 	
@@ -73,6 +86,8 @@ public class BarResource {
 		return ResponseEntity.noContent().build();
 		
 	}
+	
+	
 
 }
 

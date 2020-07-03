@@ -16,6 +16,7 @@ import time43.domain.Menu;
 import time43.enums.BarEstado;
 import time43.repository.BarRepository;
 import time43.repository.ClienteRepository;
+import time43.repository.EnderecoRepository;
 
 @Configuration
 public class Banco implements CommandLineRunner {
@@ -28,12 +29,16 @@ public class Banco implements CommandLineRunner {
 	
 	@Autowired
 	private BarRepository barRepository;
+	
+	@Autowired
+	private EnderecoRepository enderecoRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
 		
 		clienteRepository.deleteAll();
 		barRepository.deleteAll();
+		enderecoRepository.deleteAll();
 		
 		Cliente cliente1 = new Cliente(null, "Eduardo", "eduardo@gmail.com", passwordEncoder.encode("senha1"));
 		Cliente cliente2 = new Cliente(null, "ELizabeth", "eliz@gmail.com", passwordEncoder.encode("senha2"));
@@ -56,8 +61,10 @@ public class Banco implements CommandLineRunner {
 		menu1.setComidas(Arrays.asList(comida1));
 		menu2.setComidas(Arrays.asList(comida2));
 		
-		Endereco endereco1 = new Endereco("Rua Dourados", "270", "Centro");
-		Endereco endereco2 = new Endereco("Rua São Carlos", "1500", "Centro");
+		Endereco endereco1 = new Endereco(null, "Rua Dourados", "270", "Centro");
+		Endereco endereco2 = new Endereco(null, "Rua São Carlos", "1500", "Centro");
+		
+		enderecoRepository.saveAll(Arrays.asList(endereco1, endereco2));
 
 		Bar bar1 = new Bar(null, "Bar do Zé", 5.0, menu1, endereco1, BarEstado.INDEFINIDO);
 		Bar bar2 = new Bar(null, "Bar da Vó", 5.0, menu2, endereco2, BarEstado.INDEFINIDO);

@@ -53,7 +53,7 @@ public class Banco implements CommandLineRunner {
 		menu1.setBebidas(Arrays.asList(bebida1, bebida2));
 		menu2.setBebidas(Arrays.asList(bebida3, bebida4));
 		menu1.setComidas(Arrays.asList(comida1));
-		menu1.setComidas(Arrays.asList(comida2));
+		menu2.setComidas(Arrays.asList(comida2));
 		
 		Endereco endereco1 = new Endereco("Rua Dourados", "270", "Centro");
 		Endereco endereco2 = new Endereco("Rua São Carlos", "1500", "Centro");

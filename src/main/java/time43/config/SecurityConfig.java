@@ -27,13 +27,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 			.antMatchers(PUBLIC_MATCHERS).permitAll()
 			.anyRequest().authenticated()
-			.and()
-			.formLogin()
-				.loginPage("/login")
-				.permitAll()
-				.passwordParameter("Senha")
-				.usernameParameter("Email");
-		
+			.and().formLogin()
+            .permitAll()
+            .passwordParameter("senha")
+            .usernameParameter("email");
+			
 	}
 	
 	@Override

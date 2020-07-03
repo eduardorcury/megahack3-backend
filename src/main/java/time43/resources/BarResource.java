@@ -8,12 +8,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import time43.domain.Bar;
+import time43.dto.PontuacaoDTO;
 import time43.services.BarService;
 
 @RestController
@@ -46,6 +48,17 @@ public class BarResource {
 		Bar obj = barService.insert(bar);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
+		
+	}
+	
+	@PutMapping("/{id}/pontuacao")
+	public ResponseEntity<Void> updatePontuacao(@PathVariable String id, @RequestBody PontuacaoDTO pontuacao) {
+		
+		Bar bar = barService.findById(id);
+		bar.setId(id);
+		bar.setPontuacao(pontuacao.getPontuacao());
+		bar = barService.updatePontuacao(bar);
+		return ResponseEntity.noContent().build();
 		
 	}
 

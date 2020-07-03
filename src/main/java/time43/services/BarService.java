@@ -34,5 +34,18 @@ public class BarService {
 		return barRepository.insert(bar);
 		
 	}
+	
+	public Bar updatePontuacao(Bar bar) {
+		
+		Bar newBar = findById(bar.getId());
+		newBar.setClientes(bar.getClientes());
+		newBar.setEndereco(bar.getEndereco());
+		newBar.setEstado(bar.getEstado());
+		newBar.setId(bar.getId());
+		newBar.setMenu(bar.getMenu());
+		newBar.setNome(bar.getNome());
+		newBar.setPontuacao(bar.getPontuacao());
+		return barRepository.save(newBar);
+	}
 
 }

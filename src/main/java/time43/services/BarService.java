@@ -38,13 +38,20 @@ public class BarService {
 	public Bar updatePontuacao(Bar bar) {
 
 		Bar newBar = findById(bar.getId());
-		newBar.setClientes(bar.getClientes());
-		newBar.setEndereco(bar.getEndereco());
-		newBar.setEstado(bar.getEstado());
 		newBar.setId(bar.getId());
-		newBar.setMenu(bar.getMenu());
 		newBar.setNome(bar.getNome());
+		newBar.setCnpj(bar.getCnpj());
+		newBar.setCep(bar.getCep());
+		newBar.setEndereco(bar.getEndereco());
+		newBar.setNumero(bar.getNumero());
+		newBar.setCidade(bar.getCidade());
+		newBar.setUf(bar.getUf());
+		newBar.setTelefone(bar.getTelefone());
+		newBar.setComentario(bar.getComentario());
+		newBar.setMenu(bar.getMenu());
 		newBar.setPontuacao(bar.getPontuacao());
+		newBar.setEstado(bar.getEstado());
+		newBar.setClientes(bar.getClientes());
 		return barRepository.save(newBar);
 
 	}
@@ -52,13 +59,20 @@ public class BarService {
 	public Bar updateEstado(Bar bar) {
 
 		Bar newBar = findById(bar.getId());
-		newBar.setClientes(bar.getClientes());
-		newBar.setEndereco(bar.getEndereco());
-		newBar.setEstado(bar.getEstado());
 		newBar.setId(bar.getId());
-		newBar.setMenu(bar.getMenu());
 		newBar.setNome(bar.getNome());
+		newBar.setCnpj(bar.getCnpj());
+		newBar.setCep(bar.getCep());
+		newBar.setEndereco(bar.getEndereco());
+		newBar.setNumero(bar.getNumero());
+		newBar.setCidade(bar.getCidade());
+		newBar.setUf(bar.getUf());
+		newBar.setTelefone(bar.getTelefone());
+		newBar.setComentario(bar.getComentario());
+		newBar.setMenu(bar.getMenu());
 		newBar.setPontuacao(bar.getPontuacao());
+		newBar.setEstado(bar.getEstado());
+		newBar.setClientes(bar.getClientes());
 		return barRepository.save(newBar);
 
 	}

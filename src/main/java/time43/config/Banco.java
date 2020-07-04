@@ -40,9 +40,9 @@ public class Banco implements CommandLineRunner {
 		barRepository.deleteAll();
 		enderecoRepository.deleteAll();
 		
-		Cliente cliente1 = new Cliente(null, "Eduardo", "eduardo@gmail.com", passwordEncoder.encode("senha1"));
-		Cliente cliente2 = new Cliente(null, "ELizabeth", "eliz@gmail.com", passwordEncoder.encode("senha2"));
-		Cliente cliente3 = new Cliente(null, "Ana", "ana@gmail.com", passwordEncoder.encode("senha3"));
+		Cliente cliente1 = new Cliente(null, "Eduardo", "000.000.000-00", "03/02/1998", "eduardo@gmail.com", passwordEncoder.encode("senha1"));
+		Cliente cliente2 = new Cliente(null, "ELizabeth", "000.000.000-00", "07/10/1990", "eliz@gmail.com", passwordEncoder.encode("senha2"));
+		Cliente cliente3 = new Cliente(null, "Ana", "000.000.000-00", "08/11/1998", "ana@gmail.com", passwordEncoder.encode("senha3"));
 		
 		clienteRepository.saveAll(Arrays.asList(cliente1, cliente2, cliente3));
 		

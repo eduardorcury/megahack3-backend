@@ -35,7 +35,7 @@ public class ClienteService {
 	
 	public Cliente insert(Cliente cliente) {
 		
-		Cliente novoCliente = new Cliente(null, cliente.getNome(), cliente.getEmail(), encoder.encode(cliente.getSenha()));
+		Cliente novoCliente = new Cliente(null, cliente.getNome(), cliente.getCpf(), cliente.getNascimento(), cliente.getEmail(), encoder.encode(cliente.getSenha()));
 		return clienteRepository.insert(novoCliente);
 		
 	}

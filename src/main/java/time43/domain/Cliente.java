@@ -5,8 +5,6 @@ import java.io.Serializable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Document
 public class Cliente implements Serializable {
 
@@ -18,7 +16,6 @@ public class Cliente implements Serializable {
 	private String nome;
 	private String email;
 	
-	@JsonIgnore
 	private String senha;
 
 	public Cliente() {

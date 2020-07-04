@@ -25,7 +25,8 @@ A documentação gerada pelo Swagger pode ser consultada [aqui](https://megahack
 ## :mag: &nbsp;&nbsp; Como testar a aplicação
 
 O Backend foi hospedado com o heroku e pode ser acessado [aqui](https://megahack3-time43-backend.herokuapp.com/).
-Caso se queira fazer modificações no código, faça a clonagem do projeto. Na pasta do projeto, abra um terminal e instale as dependências do projeto digitando:
+
+Caso se queira fazer modificações no código, é preciso fazer a clonagem do projeto. Na pasta do projeto, abra um terminal e instale as dependências do projeto digitando:
 ```
 mvn clean install
 ```

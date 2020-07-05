@@ -17,8 +17,8 @@ public class Cliente implements Serializable {
 	private String cpf;
 	private String nascimento;
 	private String email;
-	
 	private String senha;
+	private Integer moedas = 0;
 
 	public Cliente() {
 
@@ -49,7 +49,7 @@ public class Cliente implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getCpf() {
 		return cpf;
 	}
@@ -80,6 +80,14 @@ public class Cliente implements Serializable {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public Integer getMoedas() {
+		return moedas;
+	}
+
+	public void setMoedas(Integer moedas) {
+		this.moedas = moedas;
 	}
 
 	@Override

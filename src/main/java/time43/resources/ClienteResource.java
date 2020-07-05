@@ -8,12 +8,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import time43.domain.Cliente;
+import time43.dto.MoedasDTO;
 import time43.services.ClienteService;
 
 @RestController
@@ -46,6 +48,17 @@ public class ClienteResource {
 		Cliente obj = clienteService.insert(cliente);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
+		
+	}
+	
+	@PutMapping("/{id}/moedas")
+	public ResponseEntity<Void> updateMoedas(@PathVariable String id, @RequestBody MoedasDTO moedas) {
+		
+		Cliente cliente = clienteService.findById(id);
+		cliente.setId(id);
+		cliente.setMoedas(moedas.getMoedas());
+		cliente = clienteService.updateMoedas(cliente);
+		return ResponseEntity.noContent().build();
 		
 	}
 

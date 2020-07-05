@@ -39,5 +39,18 @@ public class ClienteService {
 		return clienteRepository.insert(novoCliente);
 		
 	}
+	
+	public Cliente updateMoedas(Cliente cliente) {
+		
+		Cliente newCliente = findById(cliente.getId());
+		newCliente.setId(cliente.getId());
+		newCliente.setNome(cliente.getNome());
+		newCliente.setCpf(cliente.getCpf());
+		newCliente.setNascimento(cliente.getNascimento());
+		newCliente.setEmail(cliente.getEmail());
+		newCliente.setMoedas(cliente.getMoedas());
+		return clienteRepository.save(newCliente);
+		
+	}
 
 }

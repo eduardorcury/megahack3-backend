@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../../assets/fontes/Mohave-Medium.otf');
+    font-weight: 600;
+
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../../assets/fontes/Mohave-Bold.otf');
+    font-weight: bold;
+
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../../assets/fontes/Mohave-Light.otf');
+
+}
+
+body{
+    font-family: 'Mohave', serif;
+}
+
+/* === header === */
+
+body header {
+    background-color: #F2CB04;
+    width: 100%;
+    height: 70px;
+}
+
+body header nav{
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 53px;
+    height: 53px;
+}
+
+body header nav div{
+    display: flex;
+    flex-direction: column;
+    margin: 0 62px 0 62px;
+
+}
+
+body header nav div p {
+    font-size: 14px;
+    color: #636363;
+}
+
+body header nav div h1{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* === main ===  */
+
+main{
+    width: 360px;
+    margin: 0 auto;
+}
+
+.container-bar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-bar img{
+    width: 100%;
+    height: 241px;
+}
+
+.sobre-bar{
+    margin-left: 23px;
+}
+
+.titulo{
+    margin: 17px 0 17px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sobre-bar .descr{
+    font-size: 20px;
+}
+
+.promocoes{
+    margin: 25px 0 25px;
+}
+.promocoes div{
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 25px;
+}
+
+.promocoes div img{
+    width: 96px;
+    height: 92px;
+}
+
+.info{
+    display: flex;
+    align-items: initial;
+    justify-content: initial;
+    flex-direction: column;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.info h6{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.info-drescr{
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.tempo{
+    font-size: 14px;
+    font-weight: bold;
+    width: 250px;
+}

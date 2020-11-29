@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mohave';
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../assets/fontes/Mohave-Medium.otf');
+    font-weight: 600;
+
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../assets/fontes/Mohave-Bold.otf');
+    font-weight: bold;
+
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../assets/fontes/Mohave-Light.otf');
+
+}
+
+
+/* === header === */
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header div{
+    background-image: url('../assets/background.png');
+    background-repeat: repeat-x;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+header div img{
+    position: absolute;
+    top: 92px;
+    margin-bottom: 32px;
+}
+
+/* === forms === */
+.login-container {
+    max-width: 264px;
+    margin: 0 auto;
+}
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 260px;
+    position: relative;
+}
+
+.login-container form div{
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #878585;
+    width: 260px;
+
+
+}
+.login-container form div + div{
+    margin-top: 15px;
+}
+
+
+.login-container form div label{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#login, #senha{
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 26px;
+    margin-left: 16px;
+    border: none;
+    box-shadow: none;
+    outline: 0;
+    padding-bottom: 11px;
+}
+
+.login-container form a{
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-top: 2px;
+    margin-bottom: 27px;
+}
+
+#buttom{
+    width: 156px;
+    height: 44px;
+    border-radius: 10px;
+    background-color: #F2CB04;
+    border: none;
+
+    margin: 0 auto;
+
+    box-shadow: none;
+    outline: 0;
+
+    cursor: pointer;
+
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+/* === redes sociais === */
+
+#redes-sociais {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#redes-sociais p{
+    font-size: 13px;
+    font-weight: bold;
+    color: #636363;
+
+    margin-top: 30px;
+    margin-bottom: 23px;
+    text-align: center;
+}
+
+#redes-sociais img + img{
+    margin-left: 29px;
+}
+
+#redes-sociais img{
+    margin-bottom: 20px;
+}
+
+.registrar{
+    max-width: 280px;
+    margin-bottom: 44px;
+}
+.registrar p{
+    display: inline;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.registrar span{
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+}

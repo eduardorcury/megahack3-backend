@@ -1,0 +1,69 @@
+.fechar {
+    cursor: pointer;
+
+}
+
+.navbar {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+
+}
+
+.navbar div {
+    background-color: #730217;
+}
+
+.navbar div img {
+    width: 72px;
+    height: 72px;
+    margin: 17px;
+}
+
+.navbar div p {
+    margin-left: 17px;
+    padding-bottom: 27px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    padding-top: 34px;
+    padding-bottom: 43px;
+    background-color: white;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 26px;
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.navbar ul li img {
+    margin-right: 17px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+}
+
+.navbar ul li p {
+    font-size: 25px;
+    color: #636363;
+
+}
+
+.navbar ul li + li {
+    margin-top: 43px;
+}
+
+.navbar.visible {
+    visibility: visible;
+}

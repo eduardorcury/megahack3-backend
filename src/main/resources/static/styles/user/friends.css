@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mohave', serif;
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../../assets/fontes/Mohave-Medium.otf');
+    font-weight: 600;
+
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../../assets/fontes/Mohave-Bold.otf');
+    font-weight: bold;
+
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../../assets/fontes/Mohave-Light.otf');
+
+}
+
+/*  ==== header ==== */
+body header {
+    background-color: #F2CB04;
+    width: 100%;
+    height: 70px;
+}
+
+body header nav {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 53px;
+    height: 53px;
+}
+
+body header nav div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 62px 0 62px;
+
+}
+
+body header nav div p {
+    font-size: 14px;
+    color: #636363;
+}
+
+body header nav div h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* === main === */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 55px auto;
+}
+
+main {
+    position: relative;
+}
+
+main div {
+    display: flex;
+
+    margin-bottom: 30px;
+}
+
+.info-embaixador {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto auto 20px;
+}
+
+.info-embaixador p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.info-embaixador p span {
+    font-weight: lighter;
+}
+
+/* === form === */
+
+main form {
+    max-width: 247px;
+    margin: 0 auto;
+}
+
+.busca {
+    display: flex;
+
+    align-items: center;
+    width: 299px;
+    height: 59px;
+
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.busca img {
+    margin-left: 20px;
+    margin-right: 16px;
+}
+
+.busca p {
+    font-size: 20px;
+    color: #636363;
+}
+
+main form div {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #878585;
+    width: 260px;
+}
+
+main form div label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+main form div input {
+    font-size: 40px;
+    font-weight: lighter;
+    margin-top: 26px;
+    margin-left: 16px;
+    border: none;
+    box-shadow: none;
+    outline: 0;
+    padding-bottom: 11px;
+}
+
+#buttom {
+    width: 224px;
+    height: 44px;
+    border-radius: 10px;
+    border: none;
+    background-color: #F2CB04;
+    box-shadow: none;
+    outline: 0;
+    cursor: pointer;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-left: 43px;
+}

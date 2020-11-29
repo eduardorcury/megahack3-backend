@@ -1,7 +1,7 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Mohave';
+    font-family: 'Mohave', serif;
 }
 
 @font-face {
@@ -24,13 +24,14 @@
 
 }
 
-body{
+body {
     height: 640px;
 }
+
 /* === header === */
 
 
-header div{
+header div {
     background-image: url('../../assets/background.png');
     background-repeat: repeat-x;
     height: 300px;
@@ -39,7 +40,7 @@ header div{
     justify-content: center;
 }
 
-header div img{
+header div img {
     position: absolute;
     top: 92px;
     margin-bottom: 32px;
@@ -47,24 +48,24 @@ header div img{
 
 /* === forms === */
 
-.content-cadastro form{
+.content-cadastro form {
     max-width: 247px;
     margin: 0 auto;
 }
 
-.form-id{
+.form-id {
     display: flex;
     flex-direction: column;
     border-bottom: solid 1px #878585;
     width: 260px;
 }
 
-.form-id label{
+.form-id label {
     font-size: 15px;
     font-weight: bold;
 }
 
-.form-id input{
+.form-id input {
     font-size: 15px;
     font-weight: lighter;
     margin-top: 26px;
@@ -75,7 +76,7 @@ header div img{
     padding-bottom: 11px;
 }
 
-.form-id textarea{
+.form-id textarea {
     margin-top: 26px;
     margin-left: 16px;
     text-align: left;
@@ -83,42 +84,43 @@ header div img{
     padding-bottom: 11px;
 }
 
-.form-id textarea:focus{
+.form-id textarea:focus {
     outline: 0;
 }
 
-.form-id + .form-id{
+.form-id + .form-id {
     margin-top: 15px;
     display: flex;
     box-shadow: none;
     outline: 0;
 }
 
-.form-img{
+.form-img {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
 }
 
-.form-img label{
+.form-img label {
     font-size: 15px;
     font-weight: bold;
     margin-bottom: 8px;
 }
-#botao{
-    background-color:#F2CB04;
+
+#botao {
+    background-color: #F2CB04;
     padding-left: 16px;
-    padding-bottom:9px;
-    padding-top:9px;
+    padding-bottom: 9px;
+    padding-top: 9px;
     cursor: pointer;
     margin-bottom: 31px;
 }
 
-.form-img input{
+.form-img input {
     display: none;
 }
 
-#buttom{
+#buttom {
     width: 156px;
     height: 44px;
     border-radius: 10px;
@@ -136,12 +138,13 @@ header div img{
 
 /* === redes sociais === */
 
-#redes-sociais{
+#redes-sociais {
 
     max-width: 220px;
     margin: 0 auto;
 }
-#redes-sociais p{
+
+#redes-sociais p {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -150,13 +153,13 @@ header div img{
     font-size: 13px;
 }
 
-.icons{
+.icons {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
 }
 
-.icons img + img{
+.icons img + img {
     margin-left: 29px;
 
 }

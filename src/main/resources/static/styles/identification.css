@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mohave', serif;
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../assets/fontes/Mohave-Medium.otf');
+    font-weight: 600;
+
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../assets/fontes/Mohave-Bold.otf');
+    font-weight: bold;
+
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: local(Mohave), url('../assets/fontes/Mohave-Light.otf');
+
+}
+
+body {
+    height: 640px;
+}
+
+/* === header === */
+
+
+header div {
+    background-image: url('../assets/background.png');
+    background-repeat: repeat-x;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+header div img {
+    position: absolute;
+    top: 92px;
+    margin-bottom: 32px;
+}
+
+/* === buttons === */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons button {
+    width: 224px;
+    height: 44px;
+    border-radius: 10px;
+    background-color: #F2CB04;
+    border: none;
+
+    margin-top: 28px;
+
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: none;
+    outline: 0;
+
+    cursor: pointer;
+}

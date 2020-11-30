@@ -46,7 +46,7 @@
     </div>
     <div class="registrar">
         <p>Ainda não tá com a gente, chefia?</p>
-        <a href="user/register-user.jsp"><span>Faça seu cadastro aqui</span></a>
+        <a href="identification.jsp"><span>Faça seu cadastro aqui</span></a>
     </div>
 </div>
 </body>

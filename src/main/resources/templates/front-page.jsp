@@ -24,7 +24,7 @@
     <form:form action="${pageContext.request.contextPath}/login" method="POST">
         <div>
             <label for="login">Login</label>
-            <input type="text" name="email" id="login" placeholder="Seu apelido aqui" autocomplete="off">
+            <input type="text" name="username" id="login" placeholder="Seu apelido aqui" autocomplete="off">
         </div>
 
         <div>
@@ -34,7 +34,7 @@
 
         <a href="#" id="forgot-pass"> Putz... esqueci minha senha :(</a>
 
-        <button id="buttom" type="submit">ENTRAR</button>
+        <button id="buttom" type="submit" value="login">ENTRAR</button>
     </form:form>
 
     <div id="redes-sociais">

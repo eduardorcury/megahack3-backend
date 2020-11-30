@@ -11,4 +11,9 @@ public class ApplicationController {
         return "front-page";
     }
 
+    @GetMapping("/identificacao")
+    public String identificacao() {
+        return "identification";
+    }
+
 }

@@ -15,10 +15,17 @@ class ApplicationControllerTest {
     MockMvc mockMvc;
 
     @Test
-    void frontPageShouldReturnCorrectJSP() throws Exception {
+    void frontPageShouldReturnFrontPageView() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("front-page"));
+    }
+
+    @Test
+    void pathIdentificacaoShouldReturnIdentificationView() throws Exception {
+        mockMvc.perform(get("/identificacao"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("identification"));
     }
 
 }

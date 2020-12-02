@@ -19,25 +19,20 @@
 
 </header>
 <div class="content-cadastro">
-    <form method="POST" action="https://megahack3-time43-backend.herokuapp.com/login">
+    <form:form action="${pageContext.request.contextPath}/registrar-usuario" method="POST">
         <div class="form-id">
             <label for="nome">Nome completo</label>
-            <input type="text" name="nome" id="nome" placeholder="Jessé Gomes da Silva FIlho" autocomplete="off">
-        </div>
-
-        <div class="form-id">
-            <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" autocomplete="off">
-        </div>
-
-        <div class="form-id">
-            <label for="nascimento">Nasceu quando?</label>
-            <input type="text" name="nascimento" id="nascimento" placeholder="DD/MM/AAAA" autocomplete="off">
+            <input type="text" name="username" id="nome" placeholder="Jessé Gomes da Silva FIlho" autocomplete="off">
         </div>
 
         <div class="form-id">
             <label for="email">Qual seu e-mail</label>
             <input type="text" name="email" id="email" placeholder="exemplo@exemplo.com" autocomplete="off">
+        </div>
+
+        <div class="form-id">
+            <label for="password">Qual seu e-mail</label>
+            <input type="password" name="password" id="password" autocomplete="off">
         </div>
 
         <div class="form-img">
@@ -48,12 +43,9 @@
             <input type="file" name="foto" id="foto" accept="image/png, image/jpeg" >
         </div>
 
+        <button id="buttom" type="submit" value="register">CADASTRAR</button>
 
-    </form>
-    <form action="user.jsp">
-        <input type="submit" value="CADASTRAR" id="buttom">
-    </form>
-
+    </form:form>
 
     <div id="redes-sociais">
         <p>Se achar mais fácil, que tal se cadastrar com sua conta do Google ou do Facebook?</p>

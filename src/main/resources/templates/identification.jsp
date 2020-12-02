@@ -16,14 +16,8 @@
 
 </header>
 <div class="buttons">
-    <form action="user/register-user.jsp">
-        <button type="submit">sou cliente</button>
-    </form>
-
-    <form action="pub/register-pub.jsp">
-        <button type="submit">sou barista</button>
-    </form>
-
+    <a href="${pageContext.request.contextPath}/novo-usuario">sou cliente</a>
+    <a href="${pageContext.request.contextPath}/novo-bar">sou barista</a>
 </div>
 </body>
 </html>

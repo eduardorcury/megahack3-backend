@@ -1,8 +1,10 @@
 package time43.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import time43.model.UserDTO;
+import org.springframework.stereotype.Repository;
+import time43.domain.User;
 
-public interface UserRepository extends JpaRepository<UserDTO, Long> {
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
     
 }

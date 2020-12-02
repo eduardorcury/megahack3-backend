@@ -1,11 +1,13 @@
 package time43.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 import time43.domain.User;
 import time43.mappers.UserMapper;
@@ -31,8 +33,10 @@ public class UserController {
         return "user/register-user";
     }
 
-    @PostMapping("/registrar-usuario")
+    @PostMapping("/novo-usuario")
+    @ResponseStatus(HttpStatus.CREATED)
     public String registerUser(@Valid UserDTO userDTO, BindingResult result) {
+        //TODO CORRIGIR RESPONSE STATUS
         if (result.hasErrors()) {
             return "user/register-user";
         } else {

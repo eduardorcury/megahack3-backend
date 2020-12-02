@@ -19,7 +19,7 @@
 
 </header>
 <div class="content-cadastro">
-    <form:form action="${pageContext.request.contextPath}/registrar-usuario" method="POST">
+    <form:form action="${pageContext.request.contextPath}/novo-usuario" method="POST">
         <div class="form-id">
             <label for="nome">Nome completo</label>
             <input type="text" name="username" id="nome" placeholder="Jessé Gomes da Silva FIlho" autocomplete="off">

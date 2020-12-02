@@ -1,4 +1,4 @@
-package time43.model;
+package time43.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
 
 @Entity
 @Data
@@ -20,31 +19,12 @@ public class Pub {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
     private String name;
 
-    @NotBlank
-    private String cnpj;
-
-    @NotBlank
     private String cep;
 
-    @NotBlank
-    private String address;
-
-    @NotBlank
-    private String number;
-
-    @NotBlank
-    private String city;
-
-    @NotBlank
-    private String uf;
-
-    @NotBlank
     private String telephone;
 
-    @NotBlank
     private String comment;
 
 }

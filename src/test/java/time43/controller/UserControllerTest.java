@@ -51,6 +51,7 @@ class UserControllerTest {
     void showFormForRegisteringUser() throws Exception {
         mockMvc.perform(get("/novo-usuario"))
                 .andExpect(status().isOk())
+                .andExpect(model().attributeExists("user"))
                 .andExpect(view().name("user/register-user"));
     }
 

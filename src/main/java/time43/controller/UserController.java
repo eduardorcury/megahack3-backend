@@ -34,9 +34,7 @@ public class UserController {
     }
 
     @PostMapping("/novo-usuario")
-    @ResponseStatus(HttpStatus.CREATED)
     public String registerUser(@Valid UserDTO userDTO, BindingResult result) {
-        //TODO CORRIGIR RESPONSE STATUS
         if (result.hasErrors()) {
             return "user/register-user";
         } else {

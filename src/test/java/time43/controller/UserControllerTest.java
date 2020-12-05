@@ -1,8 +1,10 @@
 package time43.controller;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.BDDMockito;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -33,13 +35,16 @@ class UserControllerTest {
     @MockBean
     UserMapper userMapper;
 
-    UserDTO validUser;
-    UserDTO invalidUser;
+    UserDTO validDTO;
+    UserDTO invalidDTO;
+
+    User validUser;
 
     @BeforeEach
     void setup() {
-        validUser = new UserDTO(null, "eduardo", "eduardo@gmail.com", "senha");
-        invalidUser = new UserDTO(null, "", "", "ab");
+        validDTO = new UserDTO(null, "eduardo", "eduardo@gmail.com", "teste");
+        validUser = new User(null, "eduardo", "eduardo@gmail.com", "teste");
+        invalidDTO = new UserDTO(null, "", "", "ab");
     }
 
     @Test
@@ -52,18 +57,28 @@ class UserControllerTest {
     @Test
     void registerNewUserWithValidData() throws Exception {
 
-        //User user = userMapper.toDomain(validUser);
-        //user.setId(1L);
+        when(userMapper.toDomain(validDTO)).thenReturn(validUser);
+        when(userRepository.save(validUser))
+                .thenReturn(new User(1l, "eduardo", "eduardo@gmail.com", "teste"));
 
-        //when(userMapper.toDomain(validUser)).thenReturn(user);
-        //when(userRepository.save(user)).thenReturn(user);
-
-        //TODO CORRIGIR
         mockMvc.perform(post("/novo-usuario")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(validUser)))
-                .andExpect(status().isCreated())
-                .andExpect(view().name("/user/1"));
+                    .param("username", validDTO.getUsername())
+                    .param("email", validDTO.getEmail())
+                    .param("password", validDTO.getPassword()))
+                .andExpect(status().is3xxRedirection());
+    }
+
+    @Test
+    void registerUserWithInvalidData() throws Exception {
+
+        mockMvc.perform(post("/novo-usuario")
+                    .param("username", invalidDTO.getUsername())
+                    .param("email", invalidDTO.getEmail())
+                    .param("password", invalidDTO.getPassword()))
+                .andExpect(model().attributeHasFieldErrors("userDTO", "username"))
+                .andExpect(model().attributeHasFieldErrors("userDTO", "email"))
+                .andExpect(model().attributeHasFieldErrors("userDTO", "password"))
+                .andExpect(view().name("user/register-user"));
     }
 
 }

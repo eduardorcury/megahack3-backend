@@ -9,4 +9,8 @@ spring:
       path: /h2-console
   jpa:
     show-sql: true
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/jsp/
 

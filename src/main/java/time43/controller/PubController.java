@@ -40,7 +40,7 @@ public class PubController {
             return "pub/register-pub";
         } else {
             Pub newPub = pubRepository.save(pubMapper.toDomain(pubDTO));
-            return "redirect:/bar/" + newPub.getId();
+            return "redirect:/bar/" + pubRepository.save(pubMapper.toDomain(pubDTO)).getId();
         }
     }
 

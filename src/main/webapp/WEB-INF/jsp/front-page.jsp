@@ -1,21 +1,22 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Alaobá</title>
 
-    <link rel="stylesheet" href="../static/styles/style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/styles/style.css">
 </head>
 
 <body>
 <header>
     <div>
-        <img src="../static/assets/icons/logo-alaoba.svg" alt="logo-alaoba">
+        <img src="${pageContext.request.contextPath}/resources/static/assets/icons/logo-alaoba.svg" alt="logo-alaoba">
     </div>
 </header>
 
@@ -40,8 +41,8 @@
     <div id="redes-sociais">
         <p>Ou entrar com</p>
         <div class="icons">
-            <img src="../static/assets/icons/google.svg" alt="google">
-            <img src="../static/assets/icons/facebook.svg" alt="facebook">
+            <img src="${pageContext.request.contextPath}/resources/static/assets/icons/google.svg" alt="google">
+            <img src="${pageContext.request.contextPath}/resources/static/assets/icons/facebook.svg" alt="facebook">
         </div>
     </div>
     <div class="registrar">

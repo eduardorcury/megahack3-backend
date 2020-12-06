@@ -50,7 +50,7 @@ public class UserController {
     public ModelAndView getUserById(@PathVariable("userId") Long userId) {
         ModelAndView modelAndView = new ModelAndView("user/user");
         User user = userRepository.findById(userId).get();
-        modelAndView.addObject(user);
+        modelAndView.addObject("user", user);
         return modelAndView;
     }
 

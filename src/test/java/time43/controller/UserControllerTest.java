@@ -1,20 +1,18 @@
 package time43.controller;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.BDDMockito;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import time43.domain.User;
 import time43.mappers.UserMapper;
 import time43.model.UserDTO;
 import time43.repository.UserRepository;
+
+import java.util.Optional;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -80,6 +78,16 @@ class UserControllerTest {
                 .andExpect(model().attributeHasFieldErrors("userDTO", "email"))
                 .andExpect(model().attributeHasFieldErrors("userDTO", "password"))
                 .andExpect(view().name("user/register-user"));
+    }
+
+    @Test
+    void showUserPage() throws Exception {
+
+        when(userRepository.findById(1L)).thenReturn(Optional.of(validUser));
+
+        mockMvc.perform(get("/usuario/1"))
+                .andExpect(view().name("user/user"))
+                .andExpect(model().attributeExists("user"));
     }
 
 }

@@ -13,7 +13,7 @@
 	<artifactId>megahack3-backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>megahack3-backend</name>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<description>Backend do projeto desenvolvido na MegaHack 3</description>
 
 	<properties>

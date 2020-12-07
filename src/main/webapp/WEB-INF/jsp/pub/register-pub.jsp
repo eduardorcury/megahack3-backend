@@ -1,3 +1,7 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +10,12 @@
 
     <title>Alaobá</title>
 
-    <link rel="stylesheet" href="../../static/styles/user/register-user.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/styles/user/register-user.css">
 </head>
 <body>
 <header>
     <div>
-        <img src="../../static/assets/icons/logo-alaoba.svg" alt="logo-alaoba">
+        <img src="${pageContext.request.contextPath}/resources/static/assets/icons/logo-alaoba.svg" alt="logo-alaoba">
     </div>
 
 </header>
@@ -73,7 +77,7 @@
             <input type="file" name="foto" id="foto" accept="image/png, image/jpeg">
         </div>
 
-        <img src="../../static/assets/img-bar.png" alt="" style="width: 277px; margin: 0 0 15px;">
+        <img src="${pageContext.request.contextPath}/resources/static/assets/img-bar.png" alt="" style="width: 277px; margin: 0 0 15px;">
 
 
     </form>

@@ -1,3 +1,7 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +10,17 @@
 
     <title>Alaobá</title>
 
-    <link rel="stylesheet" href="../../static/styles/user/token.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/styles/user/token.css">
 </head>
 <body>
 <header>
     <nav>
-        <img class="logo" src="../../static/assets/icons/back.png" alt="logo-alaoba">
+        <img class="logo" src="${pageContext.request.contextPath}/resources/static/assets/icons/back.png" alt="logo-alaoba">
         <div class="saldo">
             <p>Saldo disponível</p>
             <h1>3333 MOEDAS</h1>
         </div>
-        <img class="button" src="../../static/assets/icons/menu.png" alt="menu">
+        <img class="button" src="${pageContext.request.contextPath}/resources/static/assets/icons/menu.png" alt="menu">
     </nav>
 
 </header>
@@ -35,7 +39,7 @@
         Aêêê! Parabéns, você ganhou 15 moedas nessa ida ao bar! Saúde!
     </p>
 
-    <img src="../../static/assets/icons/beer.png" alt="beer">
+    <img src="${pageContext.request.contextPath}/resources/static/assets/icons/beer.png" alt="beer">
 </main>
 
 </body>

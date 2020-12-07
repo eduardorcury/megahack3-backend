@@ -1,5 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,12 +10,12 @@
 
     <title>Alaobá</title>
 
-    <link rel="stylesheet" href="../../static/styles/user/register-user.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/styles/user/register-user.css">
 </head>
 <body>
 <header>
     <div>
-        <img src="../../static/assets/icons/logo-alaoba.svg" alt="logo-alaoba">
+        <img src="${pageContext.request.contextPath}/resources/static/assets/icons/logo-alaoba.svg" alt="logo-alaoba">
     </div>
 
 </header>
@@ -55,8 +56,8 @@
     <div id="redes-sociais">
         <p>Se achar mais fácil, que tal se cadastrar com sua conta do Google ou do Facebook?</p>
         <div class="icons">
-            <img src="../../static/assets/icons/google.svg" alt="google">
-            <img src="../../static/assets/icons/facebook.svg" alt="facebook">
+            <img src="${pageContext.request.contextPath}/resources/static/assets/icons/google.svg" alt="google">
+            <img src="${pageContext.request.contextPath}/resources/static/assets/icons/facebook.svg" alt="facebook">
         </div>
     </div>
 </div>

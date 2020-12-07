@@ -1,3 +1,7 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +10,20 @@
 
     <title>Alaobá</title>
 
-    <link rel="stylesheet" href="../../static/styles/pub/price-view.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/styles/pub/price-view.css">
 </head>
 <body>
 <header>
     <nav>
-        <img class="logo" src="../../static/assets/icons/back.png" alt="logo-alaoba">
+        <img class="logo" src="${pageContext.request.contextPath}/resources/static/assets/icons/back.png" alt="logo-alaoba">
 
-        <img class="button" src="../../static/assets/icons/menu.png" alt="menu">
+        <img class="button" src="${pageContext.request.contextPath}/resources/static/assets/icons/menu.png" alt="menu">
     </nav>
 </header>
 
 <main>
     <div>
-        <img src="../../static/assets/drink.png" alt="drink">
+        <img src="${pageContext.request.contextPath}/resources/static/assets/drink.png" alt="drink">
         <div class="info">
             <h6>Promoção 01 - Recompensa</h6>
             <p>Quem manda na minha sou euzis! Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.</p>
@@ -30,7 +34,7 @@
     </div>
 
     <div>
-        <img src="../../static/assets/drink.png" alt="drink">
+        <img src="${pageContext.request.contextPath}/resources/static/assets/drink.png" alt="drink">
         <div class="info">
             <h6>Promoção 01 - Recompensa</h6>
             <p>Quem manda na minha sou euzis! Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.</p>
@@ -41,7 +45,7 @@
     </div>
 
     <div>
-        <img src="../../static/assets/drink.png" alt="drink">
+        <img src="${pageContext.request.contextPath}/resources/static/assets/drink.png" alt="drink">
         <div class="info">
             <h6>Promoção 01 - Recompensa</h6>
             <p>Quem manda na minha sou euzis! Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.</p>

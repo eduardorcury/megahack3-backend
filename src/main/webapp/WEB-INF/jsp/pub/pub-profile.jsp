@@ -1,3 +1,7 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,21 +10,21 @@
 
     <title>Alaobá</title>
 
-    <link rel="stylesheet" href="../../static/styles/pub/pub-profile.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/styles/pub/pub-profile.css">
 </head>
 <body>
 <header>
     <nav>
-        <img class="logo" src="../../static/assets/icons/back.png" alt="logo-alaoba">
+        <img class="logo" src="${pageContext.request.contextPath}/resources/static/assets/icons/back.png" alt="logo-alaoba">
 
-        <img class="button" src="../../static/assets/icons/menu.png" alt="menu">
+        <img class="button" src="${pageContext.request.contextPath}/resources/static/assets/icons/menu.png" alt="menu">
     </nav>
 
 </header>
 
 <main>
     <div class="container-bar">
-        <img src="../../static/assets/img-bar.png" alt="bar">
+        <img src="${pageContext.request.contextPath}/resources/static/assets/img-bar.png" alt="bar">
         <div class="sobre-bar">
             <p class="titulo">Habeas Copus Bar</p>
             <p class="descr">Eiiitaaa Mainhaaa! Esse lorem ipsum é só na sacanageeem! E que abundância meu irmão viu!
@@ -43,7 +47,7 @@
 
     <div class="promocoes">
         <div>
-            <img src="../../static/assets/drink.png" alt="drink">
+            <img src="${pageContext.request.contextPath}/resources/static/assets/drink.png" alt="drink">
 
             <div class="info">
                 <h6>Promoção 01 - Recompensa</h6>
@@ -56,7 +60,7 @@
         </div>
 
         <div>
-            <img src="../../static/assets/drink.png" alt="drink">
+            <img src="${pageContext.request.contextPath}/resources/static/assets/drink.png" alt="drink">
             <div class="info">
                 <h6>Promoção 01 - Recompensa</h6>
                 <p>Quem manda na minha sou euzis! Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.</p>

@@ -1,3 +1,7 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +10,14 @@
 
     <title>Alaobá</title>
 
-    <link rel="stylesheet" href="../../static/styles/pub/token.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/static/styles/pub/token.css">
 </head>
 <body>
 <header>
     <nav>
-        <img class="logo" src="../../static/assets/icons/back.png" alt="logo-alaoba">
+        <img class="logo" src="${pageContext.request.contextPath}/resources/static/assets/icons/back.png" alt="logo-alaoba">
 
-        <img class="button" src="../../static/assets/icons/menu.png" alt="menu">
+        <img class="button" src="${pageContext.request.contextPath}/resources/static/assets/icons/menu.png" alt="menu">
     </nav>
 </header>
 
@@ -27,7 +31,7 @@
         <input class="buttom" type="submit" value="gerar qrcode" id="buttom">
     </form>
 
-    <img src="../../static/assets/icons/qrcode.svg" alt="">
+    <img src="${pageContext.request.contextPath}/resources/static/assets/icons/qrcode.svg" alt="">
 
 </main>
 
